@@ -10,6 +10,6 @@ zoidberg@futurama:data (feature-xyz)$ git unpushed
 ## Iterate over all .git subdirs and do something
 
 ```
-git forall log --oneline
+zoidberg@futurama:data (feature-xyz)$ git forall log --oneline
 6c3102c (HEAD, feature-packagesbundles) newline removed
 ```

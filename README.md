@@ -1,5 +1,7 @@
 # git-tools
 
+Copy files to a directory that is inside your path and make sure they are executable. Open new shell and they are available as git commands.
+
 ## Show unpushed branches
 
 ```

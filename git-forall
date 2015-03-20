@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type d -name .git -exec git --git-dir={}/../.git --work-tree=$PWD/{} $* \;

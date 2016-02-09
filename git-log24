@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%aD) %C(bold blue)<%an>%Creset' --abbrev-commit --since=24hours
+

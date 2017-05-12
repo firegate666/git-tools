@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git status  # local changes to `file`
+git stash list  # further changes to `file` we want to merge
+git commit -am "WIP" file
+git stash apply
+git commit -am "WIP2" file
+git rebase -i HEAD^^  # I always use interactive rebase -- I'm sure you could do this in a single command with the simplicity of this process -- basically squash HEAD into HEAD^
+# mark the second commit to squash into the first using your EDITOR
+git reset HEAD^

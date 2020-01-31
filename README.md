@@ -2,6 +2,10 @@
 
 Copy files to a directory that is inside your path and make sure they are executable. Open new shell and they are available as git commands.
 
+Add to by path by setting this in your `.bash_rc` or `.bash_profile` or `.zshrc`
+
+    export PATH=~/git-tools:$PATH
+
 ## Show unpushed branches
 
     zoidberg@futurama:data (feature-xyz)$ git unpushed

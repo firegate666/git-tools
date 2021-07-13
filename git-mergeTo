@@ -1,0 +1,22 @@
+#!/bin/bash
+# Merge current branch to target branch
+
+CURRENT_BRANCH=`git branch --show-current`
+TARGET_BRANCH="$1"
+
+echo "Merge $CURRENT_BRANCH to $TARGET_BRANCH"
+
+echo "Checkout $TARGET_BRANCH"
+git checkout $TARGET_BRANCH
+
+echo "Merge $CURRENT_BRANCH"
+git merge $CURRENT_BRANCH
+
+if [ -n "$2" ] && [ "$2" == "push" ]; then
+  echo "Push $TARGET_BRANCH"
+fi
+
+echo "Checkout $CURRENT_BRANCH"
+git checkout $CURRENT_BRANCH
+
+echo "Merged $CURRENT_BRANCH to $TARGET_BRANCH"

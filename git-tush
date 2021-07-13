@@ -1,3 +1,5 @@
 #!/bin/bash
+# git push and with tags
+
 git push && git push --tags
 

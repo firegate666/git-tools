@@ -1,4 +1,5 @@
 #/bin/bash
+# Show diff between commit
 
 git log $1..$2 --pretty=format:"%h %Cblue%ad%Creset %ae %Cgreen%s%Creset" --date=short --decorate
 

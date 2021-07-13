@@ -1,2 +1,4 @@
 #!/bin/bash
+# Show latest tag
+
 git describe --abbrev=0

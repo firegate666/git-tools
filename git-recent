@@ -1,2 +1,4 @@
 #!/bin/bash
+# Show last X (default: 10) commits
+
 git log --oneline -${1-10} --pretty=format:'%C(yellow)%h%Creset - %s %Cgreen<%an>%Creset %C(bold blue)(%cr)'

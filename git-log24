@@ -1,4 +1,5 @@
 #!/bin/bash
+# Show commits from 24 hours
 
 git logX 24
 

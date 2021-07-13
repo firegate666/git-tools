@@ -1,3 +1,5 @@
 #!/bin/bash
+# shorthand for reset and clean
+
 git reset --hard && git clean -d -f
 

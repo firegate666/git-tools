@@ -1,0 +1,4 @@
+#!/bin/bash
+# Only pull head instead of all branches
+
+git pull origin $(git rev-parse --abbrev-ref HEAD)

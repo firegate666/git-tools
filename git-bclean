@@ -1,5 +1,7 @@
 #!/bin/bash
-# Remove branches that are already merged to master
+# Remove branches that are already merged to BASE_BRANCH
 
-git branch --merged master | grep -v master | xargs -n 1 git branch -d
+BASE_BRANCH=$1
+
+git branch --merged $BASE_BRANCH | grep -v $BASE_BRANCH | xargs -n 1 git branch -d
 

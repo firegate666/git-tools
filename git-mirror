@@ -1,0 +1,13 @@
+#!/bin/bash
+# Show commits from x hours
+
+REPOSITORY_URL="$1"
+REPOSITORY_PATH="$(basename $REPOSITORY_URL)"
+
+echo "Mirror repository $REPOSITORY_URL into $REPOSITORY_PATH"
+echo "Clone repository from $REPOSITORY_URL"
+git clone --bare $REPOSITORY_URL
+
+echo "Fetch LFS"
+cd $REPOSITORY_PATH
+git lfs fetch --all

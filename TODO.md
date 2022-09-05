@@ -1,2 +1,3 @@
 - Rename git-update, collides with git bash git-update
+- Extend git-mirror with pushing and switches for LFS
 - 

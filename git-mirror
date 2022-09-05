@@ -3,11 +3,24 @@
 
 REPOSITORY_URL="$1"
 REPOSITORY_PATH="$(basename $REPOSITORY_URL)"
+MIRROR_REPOSITORY=""
+MIRROR_REPOSITORY_URL="$MIRROR_REPOSITORY_URL/$REPOSITORY_PATH"
 
-echo "Mirror repository $REPOSITORY_URL into $REPOSITORY_PATH"
-echo "Clone repository from $REPOSITORY_URL"
-git clone --bare $REPOSITORY_URL
+echo ""
+echo "### Mirror repository $REPOSITORY_URL into $REPOSITORY_PATH"
+echo "### Clone repository from $REPOSITORY_URL"
+echo ""
+git clone --bare "$REPOSITORY_URL"
 
-echo "Fetch LFS"
-cd $REPOSITORY_PATH
+echo ""
+echo "### Fetch LFS"
+echo ""
+cd "$REPOSITORY_PATH"
 git lfs fetch --all
+
+# now we also need to push
+# git push --mirror "$MIRROR_REPOSITORY_URL"
+# git lfs push --all "$MIRROR_REPOSITORY_URL"
+# and optinally clean up
+# cd ..
+# rm -rf REPOSITORY_PATH

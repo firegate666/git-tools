@@ -1,5 +1,5 @@
 #!/bin/bash
-# shorthand for reset and clean
+# shorthand for very hard reset and clean
 
-git reset --hard && git clean -d -f
+git rm --cached -r . && git reset --hard && git clean -d -f
 

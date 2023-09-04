@@ -1,0 +1,5 @@
+#!/bin/bash
+# Show last X (default: 10) commits
+
+for branch in `git branch --sort=-committerdate -r | grep -v HEAD`;do echo -e `git show --format="%ci \\t%cr" $branch | head -n 1` \\t$branch; done | sort -r
+
